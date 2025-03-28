@@ -97,7 +97,7 @@ class _startRide extends State<startRide>{
                           contentPadding: EdgeInsets.symmetric(vertical: 14,horizontal: 20),
                         ),
                         maxLines: 1,
-                        googleAPIKey: 'AIzaSyCRjIBOKuPepqQ0CGcp2g9SQ1jBNqJtZT8',
+                        googleAPIKey: 'AIzaSyBA6Ve1nidBShn0zSVOrQb0hZbeFvbgBKc',
                         fetchCoordinates: true,
                         onPlaceDetailsWithCoordinatesReceived: (coordinates){
                           print("${coordinates.lat} ${coordinates.lng}");
@@ -153,42 +153,42 @@ class _startRide extends State<startRide>{
                 children: [
                   Padding(
                     padding: EdgeInsets.only(left: 15, right: 15, bottom: 10, top: 10),
-                    child: List.generate(3, (index) => Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children:
-                            [
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    "Mom",
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.normal,
-                                      color: Colors.black,
-                                    ),
-                                  ),
-                                  IconButton(
-                                    icon: Icon(Icons.location_on),
-                                    iconSize: 28,
-                                    color: (isPressed)?Colors.green: Colors.grey,
-                                    onPressed: () { setState(() {
-                                      if(isPressed){
-                                        isPressed=false;
-                                      }
-                                      else {
-                                        isPressed = true;
-                                      }
-                                    }
-                                    );},
-                                  ),
-                                ],
+                    child: Column(  // Wrap List.generate with Column
+                      children: List.generate(3, (index) {
+                        List<String> names = ["Mom", "Dad", "Brother"];
+                        return Column
+                      (
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                names[index],
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.normal,
+                                  color: Colors.black,
+                                ),
                               ),
-                          SizedBox(height: 10,),
-                      ],),
+                              IconButton(
+                                icon: Icon(Icons.location_on),
+                                iconSize: 28,
+                                color: (isPressed[index]) ? Colors.green : Colors.grey,
+                                onPressed: () {
+                                  setState(() {
+                                    isPressed[index] = !isPressed[index]; // Toggle isPressed state
+                                  });
+                                },
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 10),
+                        ],
+                      );}),
                     ),
                   ),
-                ]
+                ],
               ),
             ),
           ]
