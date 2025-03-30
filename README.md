@@ -42,15 +42,14 @@ Travl integrates AIxplain’s **Speech Recognition** and **Sentiment Analysis** 
 
 ## Tech Stack  
 - **Frontend:** Flutter (Dart)  
-- **Backend:** Node.js (Express.js)  
-- **Database:** Firebase  
+- **Database:** Firebase
 - **AI Integration:** AIxplain Speech Recognition & Sentiment Analysis Models  
 
 ## Installation Guide  
 1. **Clone the Repository:**  
    ```sh
-   git clone https://github.com/your-username/travl-app.git
-   cd travl-app
+   git clone https://github.com/Bhawarth34/travl..git
+   cd travl
    ```  
 2. **Install Dependencies:**  
    ```sh
@@ -59,11 +58,4 @@ Travl integrates AIxplain’s **Speech Recognition** and **Sentiment Analysis** 
 3. **Run the App:**  
    ```sh
    flutter run
-   ```  
-4. **Backend Setup:**  
-   - Install Node.js and navigate to the backend folder.  
-   ```sh
-   cd backend
-   npm install
-   npm start
-   ``` 
+   ```
