@@ -20,6 +20,7 @@ class _permissionHandler extends State<permissionHandler>{
       Permission.contacts,
       Permission.notification,
       Permission.phone,
+      Permission.microphone,
     ];
 
     for(Permission per in permission){

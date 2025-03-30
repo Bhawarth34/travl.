@@ -76,7 +76,6 @@ class otp extends StatelessWidget{
                   backgroundColor: Colors.white,
                   strokeWidth: 2,
                 );
-                sleep(Duration(seconds: 5));
                 Navigator.pushReplacement(context,
                     PageRouteBuilder(
                         pageBuilder: (context, animation, secondaryAnimation)=>startRide(title: title,),
