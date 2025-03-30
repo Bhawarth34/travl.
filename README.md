@@ -45,6 +45,39 @@ Travl integrates AIxplain’s **Speech Recognition** and **Sentiment Analysis** 
 - **Database:** Firebase
 - **AI Integration:** AIxplain Speech Recognition & Sentiment Analysis Models  
 
+## Folder Structure
+``` sh
+travl/
+│── android/                    # Android-specific project files
+│── ios/                        # iOS-specific project files (if applicable)
+│── lib/                        # Main source code directory
+│   ├── assets/                 # Project assets (images, animations, etc.)
+│   │   ├── car_animate.json
+│   │   ├── marker.png
+│   │   ├── otp_image.png
+│   │   ├── permission_Image.png
+│   │
+│   ├── screens/                # UI Screens
+│   │   ├── login.dart
+│   │   ├── otp.dart
+│   │   ├── permissionHandler.dart
+│   │   ├── startRide.dart
+│   │
+│   ├── services/               # Service-related logic (APIs, AI, etc.)
+│   │   ├── aiXplain.dart       # AI model integration (speech-to-text, sentiment analysis)
+│   │   ├── audioRecorder.dart  # Handles audio recording
+│   │   ├── sentiment-Analysis.dart  # Processes sentiment analysis on text
+│   │   ├── sttAixplain.dart    # Speech-to-text API interaction
+│   │
+│   ├── main.dart               # Entry point of the application
+│
+│── test/                       # Test files (if applicable)
+│── build/                      # Build-generated files
+│── .gitignore                   # Git ignore rules
+│── .flutter-plugins             # Flutter plugin references
+│── .flutter-plugins-dependencies # Flutter plugin dependencies
+```
+
 ## Installation Guide  
 1. **Clone the Repository:**  
    ```sh
